@@ -1,9 +1,3 @@
-const deathReplies = [
-    'rip',
-    'gubi',
-    'uhh.. ya dead',
-]
-
 //Accessing the commands
 const death = require("./commands/death.js");
 const leaderboard = require("./commands/leaderboard.js");
