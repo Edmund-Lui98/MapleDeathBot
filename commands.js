@@ -24,11 +24,6 @@ module.exports = function (msg) {
             command = command.substring(1);
             commands[command](msg, tokens[1], tokens);
             // console.log(msg.mentions);
-        }
-        if (msg.content === 'hi there') {
-            console.log(msg.content)
-            msg.channel.send("hello, <@!210156591629074447>");
-        }
-        
+        }        
     }
 }
