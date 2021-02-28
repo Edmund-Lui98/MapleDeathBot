@@ -28,8 +28,8 @@ module.exports = function (msg) {
 
         if (command.charAt(0) === "!") {
             command = command.substring(1);
-            commands[command](msg, tokens);
-            console.log(msg.mentions);
+            commands[command](msg, tokens[1], tokens);
+            // console.log(msg.mentions);
         }
         if (msg.content === 'hi there') {
             console.log(msg.content)
