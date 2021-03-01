@@ -6,7 +6,7 @@ let db = admin.firestore();
 module.exports = async function (msg, player, args) {
     
 
-    const deaths = await db.collection('deaths')
+    const deaths = await db.collection('deaths').orderBy("deathCount", "desc")
     deaths.get().then((querySnapshot) => {
         const leaders = querySnapshot.docs.map((doc) => {
             return { id: doc.id, ...doc.data() }

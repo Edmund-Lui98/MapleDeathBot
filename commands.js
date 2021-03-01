@@ -22,8 +22,15 @@ module.exports = function (msg) {
 
         if (command.charAt(0) === "!") {
             command = command.substring(1);
-            commands[command](msg, tokens[1], tokens);
-            // console.log(msg.mentions);
+
+            if (command in commands) {
+                commands[command](msg, tokens[1], tokens);
+                // console.log(msg.mentions);
+            } else {
+                msg.channel.send(`Not a valid command. Please type "!help" for a list of commands`);
+            }
+
+            
         }        
     }
 }
